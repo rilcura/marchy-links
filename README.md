@@ -9,3 +9,5 @@ Social destinations were extracted from https://march-socials.carrd.co/: Discord
 Primary website: https://rilcura.github.io/marchy-links/ (GitHub Pages). Source repository: https://github.com/rilcura/marchy-links. Pushes to main automatically deploy the dist folder through .github/workflows/pages.yml. The previous Sites URL remains available at https://marchys-shark-cove.randzellcura.chatgpt.site but is deployed separately. Source checks cover the five links and mocked clipboard success/failure behavior. Visual browser QA and live destination availability have not been verified.
 
 
+
+Brand icons: Simple Icons 16.35.0 (https://github.com/simple-icons/simple-icons/releases/tag/16.35.0), retrieved 2026-10-25. Six SVG paths are embedded locally and inherit the button color. Simple Icons is CC0; brand marks belong to their respective owners.

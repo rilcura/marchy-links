@@ -1,11 +1,9 @@
 # Marchy's link page
 
-Original standalone design inspired by the two supplied Carrd screenshots. Navy, powder blue, stars, an original SVG shark illustration, pill buttons, and a gentle boundaries note.
+Standalone navy and baby-blue social page inspired by the supplied Carrd screenshots.
 
-Buildless static site: `dist/index.html`, `dist/style.css`, `dist/script.js`.
+Buildless files: dist/index.html, dist/style.css, dist/script.js.
 
-TikTok uses the supplied `https://www.tiktok.com/@pleinairmarch_`. Discord, Instagram, Spotify, Steam, and Riot are intentionally disabled and labelled coming soon until March provides destinations. No Discord invitation was created. The Riot label comes from the supplied reference, not a verified Riot ID.
+Social destinations were extracted from https://march-socials.carrd.co/: Discord, Instagram, Spotify, Steam, and TikTok. No invitation was created. The Carrd Riot button incorrectly pointed to Steam; this page instead copies march#ixora, with a visible confirmation and manual-copy fallback.
 
-To activate a pending button, replace its disabled button element with an anchor with the confirmed HTTPS URL, remove the coming-soon label, and add `target="_blank" rel="noopener noreferrer"`. Do not guess profile links.
-
-Google Fonts supplies DM Sans and Playfair Display with local fallbacks. The page has no analytics, account collection, or backend.
+The Site remains owner-private. Source checks cover the five links and mocked clipboard success/failure behavior. Visual browser QA and live destination availability have not been verified.

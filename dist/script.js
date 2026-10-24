@@ -9,3 +9,21 @@ for(let i=0;i<52;i++){
  star.style.setProperty('--turn',((i*29)%60-30)+'deg');
  sky.append(star);
 }
+
+const copyButton = document.querySelector('#copy-riot');
+const copyStatus = document.querySelector('#copy-status');
+let resetCopy;
+copyButton.addEventListener('click', async () => {
+ clearTimeout(resetCopy);
+ try {
+  await navigator.clipboard.writeText('march#ixora');
+  copyButton.querySelector('.copy-label').textContent = 'copied ✓';
+  copyStatus.textContent = 'Riot ID copied: march#ixora';
+ } catch {
+  copyButton.querySelector('.copy-label').textContent = 'copy ID';
+  copyStatus.textContent = 'Couldn’t copy automatically. Select and copy this ID: march#ixora';
+ }
+ resetCopy = setTimeout(() => {
+  copyButton.querySelector('.copy-label').textContent = 'copy ID';
+ }, 3000);
+});

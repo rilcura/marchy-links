@@ -27,3 +27,14 @@ copyButton.addEventListener('click', async () => {
   copyButton.querySelector('.copy-label').textContent = 'copy ID';
  }, 3000);
 });
+
+const bonkDialog = document.querySelector('#bonk-dialog');
+const bonkButton = document.querySelector('#bonk-button');
+bonkButton.addEventListener('click', () => bonkDialog.showModal());
+document.querySelector('#close-bonk').addEventListener('click', () => bonkDialog.close());
+bonkDialog.addEventListener('click', (event) => {
+ if (event.target !== bonkDialog) return;
+ const box = bonkDialog.getBoundingClientRect();
+ if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) bonkDialog.close();
+});
+bonkDialog.addEventListener('close', () => bonkButton.focus());

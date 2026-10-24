@@ -11,3 +11,5 @@ Primary website: https://rilcura.github.io/marchy-links/ (GitHub Pages). Source 
 
 
 Brand icons: Simple Icons 16.35.0 (https://github.com/simple-icons/simple-icons/releases/tag/16.35.0), retrieved 2026-10-25. Six SVG paths are embedded locally and inherit the button color. Simple Icons is CC0; brand marks belong to their respective owners.
+
+2026-10-25 update: Discord invite changed to https://discord.gg/tutkx7ckST. User-supplied shark photo and bonk meme are in dist/assets. The onlyfans button opens a local joke dialog with Escape, close-button, and backdrop dismissal. Seven GoatCounter event attributes are prepared (including repeat clicks), but counting is NOT active until account signup and script configuration are complete.

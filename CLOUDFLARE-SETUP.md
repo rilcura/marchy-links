@@ -1,6 +1,6 @@
 # Cloudflare Pages setup
 
-Status: prepared, not deployed to Cloudflare. GitHub Pages remains live.
+Status: deployed and verified on 2026-10-25 at https://marchys-cove.pages.dev/. GitHub integration is connected to rilcura/marchy-links only. Production branch: main; build command: exit 0; output: dist. GitHub Pages remains live independently.
 
 ## Recommended: connect GitHub for automatic updates
 
@@ -11,7 +11,7 @@ Status: prepared, not deployed to Cloudflare. GitHub Pages remains live.
 
 | Setting | Value |
 | --- | --- |
-| Project name | `marchys-cove` (availability not yet checked) |
+| Project name | `marchys-cove` (deployed) |
 | Production branch | `main` |
 | Framework preset | None |
 | Build command | `exit 0` |

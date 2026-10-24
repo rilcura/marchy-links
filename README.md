@@ -6,7 +6,7 @@ Buildless files: dist/index.html, dist/style.css, dist/script.js.
 
 Social destinations were extracted from https://march-socials.carrd.co/: Discord, Instagram, Spotify, Steam, and TikTok. No invitation was created. The Carrd Riot button incorrectly pointed to Steam; this page instead copies march#ixora, with a visible confirmation and manual-copy fallback.
 
-Primary website: https://rilcura.github.io/marchy-links/ (GitHub Pages). Source repository: https://github.com/rilcura/marchy-links. Pushes to main automatically deploy the dist folder through .github/workflows/pages.yml. The previous Sites URL remains available at https://marchys-shark-cove.randzellcura.chatgpt.site but is deployed separately. Source checks cover the five links and mocked clipboard success/failure behavior. Visual browser QA and live destination availability have not been verified.
+Primary website: https://marchys-cove.pages.dev/ (Cloudflare Pages, free hosting). GitHub Pages remains at https://rilcura.github.io/marchy-links/. Cloudflare automatically deploys main using exit 0 and output directory dist. Source repository: https://github.com/rilcura/marchy-links. Pushes to main automatically deploy the dist folder through .github/workflows/pages.yml. The previous Sites URL remains available at https://marchys-shark-cove.randzellcura.chatgpt.site but is deployed separately. Source checks cover the five links and mocked clipboard success/failure behavior. Cloudflare deployment, both images, updated Discord href, and bonk popup opening/closing were verified on 2026-10-25. External destination availability has not been verified.
 
 
 

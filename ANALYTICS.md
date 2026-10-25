@@ -1,8 +1,11 @@
 # GoatCounter setup and verification
 
-Status on 2026-10-26: two-site configuration verified, deployment in progress.
+Status on 2026-10-26: deployed and verified at https://marchys-cove.pages.dev/.
+Implementation commit: `db3a7c6`; Cloudflare Pages deployment
+`9c3907a8-ebfb-4f7a-ac02-334e55306420` reported success. Production analytics.js
+was fetched and matched the configured collectors. GitHub Pages also succeeded.
 The owner completed signup/login using the existing visits code below.
-Email verification was requested from the owner; no password or API token is
+The email verification banner is now absent. No password or API token is
 stored in this repository. Only the owner's admin user exists in the account.
 
 ## Account settings
@@ -55,8 +58,8 @@ frontend routing and failure behaviour, not provider session deduplication,
 accepted real events, account privacy or production deployment.
 
 Live unauthenticated HTTP checks: both dashboard roots redirect to `/user/new`
-(login); events TOTAL counters in JSON/HTML/SVG/PNG and click-riot JSON return
-403. The visits TOTAL JSON returns 200 with a genuine provider count. Both
+(login); all 32 events counter checks (TOTAL and all seven event paths, each in
+JSON/HTML/SVG/PNG) return 403. The visits TOTAL JSON returns 200 with a genuine provider count. Both
 settings pages show login-only access and sessions enabled; only visits has
 public counters enabled. The shared Users page lists one admin and no others.
 
@@ -65,22 +68,31 @@ dialog opened and closed with both the close button and Escape, returning focus
 to its trigger. Desktop rendering was inspected. At a 390px viewport the card
 measured 349px and document scroll width equalled its 375px client width (no
 horizontal overflow). No GoatCounter library loaded on localhost and the
-unconfigured counter stayed hidden. The responsive screenshot capture was
-scaled unexpectedly, so final mobile visual inspection remains outstanding.
+counter stayed hidden. Production desktop and 390px mobile screenshots were
+subsequently inspected in the in-app browser, with a real provider counter above
+the footer and no horizontal overflow (390px viewport/client/scroll widths).
 
-Before deployment: check desktop/mobile layout with a mocked valid counter,
-seven button mappings, repeat presses, clipboard success/failure, and dialog
-close button, Escape and backdrop. Use synthetic events locally so social sites
-do not open and test clicks do not contaminate the real service.
+Real service verification in the in-app browser: one initial page load plus two
+refreshes still produced exactly one visit on the visits dashboard, containing
+only `/`. Two intentional presses of each of the seven buttons produced exactly
+14 events, two per named path, on the private events dashboard, with no `/` row.
+These are deliberate verification counts included in the totals, not historical
+traffic. No fabricated or backfilled history was added and no test data was deleted.
 
-After deployment through existing GitHub -> Cloudflare integration: verify the
-deployed commit, real collectors and owner dashboards. Check one real visit plus
-refreshes produces one session visit, and repeated intentional button presses
-increase the correct private totals once each. Record any deliberate test counts.
-Unauthenticated requests must not expose either dashboard or any events-site
-counter (TOTAL and individual event paths, all four formats). The visits counter
-must be accessible. Allow for provider processing and public cache delays; a
-stale counter alone cannot establish whether a hit was accepted.
+Production Riot copy success and bonk close-button/Escape behaviours passed.
+Mocked tests cover clipboard failure, backdrop dismissal, repeat mapping,
+collector failures and counter failure hiding. Brave left the counter hidden
+and did not produce a visit during the check, consistent with analytics
+blocking; its protections were not changed. The in-app browser counted normally.
+Social link presses opened their expected destinations; full destination
+functionality/login availability is outside this verification.
+
+The public counter still showed cached 0 while the authenticated visits dashboard
+showed 1. This is an actual cached provider response, not a fallback zero.
+Allow up to four hours for public cache expiry; fresh totals are visible after
+provider processing in the private dashboards. Retest privacy after any future
+settings change, particularly copying settings between sites, which can enable
+the events site's public counter unintentionally.
 
 ## Provider references
 

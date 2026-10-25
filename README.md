@@ -2,7 +2,7 @@
 
 Standalone navy and baby-blue social page inspired by the supplied Carrd screenshots.
 
-Buildless files: dist/index.html, dist/style.css, dist/script.js.
+Buildless files: dist/index.html, dist/style.css, dist/script.js, dist/analytics.js. Production-only GoatCounter uses separate visits and private button-event sites; see ANALYTICS.md for dashboard access and verification. Run frontend checks with `node --test tests/analytics.test.cjs`.
 
 Social destinations were extracted from https://march-socials.carrd.co/: Discord, Instagram, Spotify, Steam, and TikTok. No invitation was created. The Carrd Riot button incorrectly pointed to Steam; this page instead copies march#ixora, with a visible confirmation and manual-copy fallback.
 

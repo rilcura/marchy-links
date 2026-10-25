@@ -1,4 +1,4 @@
-// Deterministic decorative star field. No tracking or external scripts.
+// Deterministic decorative star field. Analytics is isolated in analytics.js.
 const sky=document.querySelector('.sky');
 for(let i=0;i<52;i++){
  const star=document.createElement('span');

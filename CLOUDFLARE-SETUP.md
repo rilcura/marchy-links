@@ -30,7 +30,7 @@ A sibling archive, `marchy-links-cloudflare-upload.zip`, contains the contents o
 
 ## Analytics
 
-Analytics setup is paused at the user's request. The seven event attributes alone do not collect statistics. Do not describe click counters as active.
+GoatCounter is configured with separate visits and private event sites. See ANALYTICS.md for dashboard URLs, privacy settings, deployment status and verification evidence.
 
 ## Documentation
 
